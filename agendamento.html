@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050b15">
+<title>Black Diamond | Solicitar agendamento</title>
+<meta name="description" content="Solicite uma data para atendimento na Black Diamond.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+:root{color-scheme:dark;--blue:#008bff;--line:#1665a3}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#11355b 0%,#070e1b 40%,#020407 100%);font-family:Arial,Helvetica,sans-serif;color:#f4f8ff;min-height:100vh;padding:20px 12px 35px}.card{width:min(100%,440px);margin:auto;background:linear-gradient(155deg,#0b1628,#03070d 75%);border:1px solid #2475b4;border-radius:23px;overflow:hidden;box-shadow:0 0 40px #007bff35,0 24px 70px #000a}.top{background:#03070d}.logo{display:block;width:100%;height:auto}.headline{text-align:center;padding:0 16px 14px}.eyebrow{font-size:11px;letter-spacing:3px;color:#7cc8ff;font-weight:800}.headline h1{margin:6px 0;font-size:30px;line-height:1.02;text-transform:uppercase;font-style:italic;letter-spacing:-1px}.headline h1 strong{color:#28a0ff}.headline p{margin:8px 0 0;color:#c3d3e4;font-size:13px}.car{width:100%;height:175px;object-fit:cover;display:block;object-position:center 55%;border-block:1px solid #125a9b}.content{padding:20px}.tagline{text-align:center;margin:0 0 15px;font-size:12px;letter-spacing:1.6px;color:#9cc6e8;font-weight:bold}.actions{display:grid;gap:10px}.action{display:flex;align-items:center;justify-content:center;gap:12px;padding:15px 13px;border-radius:11px;text-decoration:none;color:#fff;font-size:16px;font-weight:800;border:1px solid #238df0;background:linear-gradient(120deg,#0868bb,#07345c);box-shadow:0 4px 15px #0069cb25;transition:filter .2s,transform .2s}.action:hover{filter:brightness(1.2);transform:translateY(-1px)}.action.secondary{background:#101d2d;border-color:#315b81}.action svg{width:23px;height:23px;flex:none}.services{margin:20px 0 0;padding:16px;border:1px solid #234666;border-radius:12px;background:#07111e}.services h2{font-size:13px;letter-spacing:1.8px;color:#5bb7ff;margin:0 0 11px}.services p{margin:8px 0;color:#e2eaf5;font-size:13px}.services p:before{content:'◆';color:#209cff;margin-right:9px;font-size:9px}.address{font-size:12px;line-height:1.5;text-align:center;color:#b4c6d7;margin:18px 0 0}.foot{text-align:center;color:#7891a9;font-size:10px;padding:0 12px 18px}@media(max-width:380px){.headline h1{font-size:25px}.car{height:145px}}
+
+/* Orçamento interativo */
+.quote{margin-top:20px;padding:17px;border:1px solid #277cbd;border-radius:13px;background:linear-gradient(160deg,#0d2036,#07111e);box-shadow:0 8px 24px #0005}.quote h2{font-size:19px;margin:0 0 6px;color:#f4f8ff}.quote .hint{font-size:12px;color:#a9c6dd;line-height:1.5;margin:0 0 16px}.quote fieldset{border:0;padding:0;margin:0;min-width:0}.quote legend{font-size:12px;font-weight:800;letter-spacing:1px;color:#69bcff;margin-bottom:10px}.quote-option{display:flex;align-items:flex-start;gap:10px;padding:12px 10px;margin-bottom:8px;border:1px solid #315372;border-radius:9px;background:#0a1727;cursor:pointer;font-size:13px;line-height:1.4}.quote-option:has(input:checked){border-color:#25a1ff;background:#0b2c4a}.quote-option input{width:18px;height:18px;flex:none;accent-color:#168cff;margin:0}.quote-fields{display:grid;gap:11px;margin-top:16px}.quote-fields label{font-size:12px;color:#d9e9f8;font-weight:700;display:grid;gap:6px}.quote-fields input,.quote-fields select,.quote-fields textarea{width:100%;min-width:0;background:#06101d;border:1px solid #416487;border-radius:8px;padding:12px;color:#fff;font:inherit;font-size:14px}.quote-fields input:focus,.quote-fields select:focus,.quote-fields textarea:focus{outline:2px solid #208dff;outline-offset:1px}.quote-summary{margin:15px 0;padding:12px;background:#06101d;border-radius:9px;border:1px solid #284e70;font-size:12px;color:#c3d8e8;line-height:1.6}.quote-summary strong{color:#75c4ff}.quote-submit{width:100%;border:1px solid #47b4ff;border-radius:10px;padding:15px 10px;color:white;background:linear-gradient(120deg,#007be6,#084b87);font:800 15px Arial,sans-serif;cursor:pointer}.quote-submit:disabled{opacity:.45;cursor:not-allowed}.quote .notice{font-size:11px;color:#a9c6dd;line-height:1.5;margin:10px 0 0}.quote-error{font-size:12px;color:#ffb2b2;margin:8px 0 0}
+
+.quote-extras{margin-top:17px!important}.quote{margin-top:0}.back{display:inline-flex;align-items:center;gap:8px;color:#b9e1ff;text-decoration:none;font-size:14px;font-weight:700;margin-bottom:16px;padding:8px 0}.back:hover{text-decoration:underline}.quote-page .content{padding:18px}.quote-page .headline{padding:8px 16px 16px}.quote-page .headline h1{font-size:25px}.quote-page .logo{max-height:175px;object-fit:contain}.quote-page .address{margin-bottom:0}
+
+.appointment-note{border:1px solid #2e709c;background:#0a1c2d;padding:12px;border-radius:9px;font-size:12px;line-height:1.5;color:#c2ddf4;margin-bottom:15px}
+</style></head>
+<body><main class="card quote-page">
+<div class="top"><img class="logo" src="assets/logo-banner.webp" alt="Black Diamond Estética Automotiva"></div>
+<header class="headline"><div class="eyebrow">ESTÉTICA AUTOMOTIVA</div><h1>Solicitar <strong>agendamento</strong></h1><p>Escolha uma data e horário de preferência</p></header>
+<section class="content"><a class="back" href="index.html">← Voltar ao cartão digital</a>
+<form class="quote" id="scheduleForm" novalidate>
+<h2>Agende seu cuidado</h2>
+<p class="hint">Informe o serviço e o melhor horário para você. Confirmaremos a disponibilidade pelo WhatsApp.</p>
+<div class="appointment-note"><strong>Importante:</strong> este formulário envia uma <strong>solicitação</strong>. O horário só estará reservado após confirmação da Black Diamond.</div>
+<fieldset><legend>TIPO DE HIGIENIZAÇÃO (OPCIONAL)</legend>
+<label class="quote-option"><input type="radio" name="higienizacao" value="Higienização simples"><span>Higienização simples</span></label>
+<label class="quote-option"><input type="radio" name="higienizacao" value="Higienização detalhada"><span>Higienização detalhada</span></label>
+</fieldset>
+<fieldset class="quote-extras"><legend>SERVIÇOS ADICIONAIS</legend>
+<label class="quote-option"><input type="checkbox" name="adicional" value="Higienização de bancos"><span>Higienização de bancos</span></label>
+<label class="quote-option"><input type="checkbox" name="adicional" value="Higienização de teto"><span>Higienização de teto</span></label>
+<label class="quote-option"><input type="checkbox" name="adicional" value="Higienização de carpete"><span>Higienização de carpete</span></label>
+<label class="quote-option"><input type="checkbox" name="adicional" value="Descontaminação de chuva ácida"><span>Descontaminação de chuva ácida</span></label>
+</fieldset>
+<div class="quote-fields">
+<label>Seu nome <input name="cliente" maxlength="80" autocomplete="name" placeholder="Como podemos chamar você?" required></label>
+<label>Seu veículo <input name="veiculo" maxlength="100" placeholder="Ex.: Santa Fé 2012" required></label>
+<label>Data desejada <input name="data" type="date" required></label>
+<label>Horário de preferência <input name="hora" type="time" required></label>
+<label>Observações (opcional) <textarea name="observacoes" rows="3" maxlength="400" placeholder="Informe outros detalhes..."></textarea></label>
+</div>
+<div class="quote-summary" id="scheduleSummary" aria-live="polite">Selecione um serviço para continuar.</div>
+<button class="quote-submit" id="scheduleSubmit" type="submit">Solicitar horário pelo WhatsApp</button>
+<p class="quote-error" id="scheduleError" role="alert" hidden></p>
+<p class="notice">Não há reserva automática. A Black Diamond confirmará a disponibilidade antes do agendamento.</p>
+</form><p class="address">📍 Rua Rui Barbosa, 350 • Centro<br>Itararé/SP<br>📞 (14) 99741-7384</p>
+</section><div class="foot">BLACK DIAMOND • ESTÉTICA AUTOMOTIVA</div></main>
+<script>
+(function(){
+'use strict';
+const form=document.getElementById('scheduleForm');
+const summary=document.getElementById('scheduleSummary');
+const submit=document.getElementById('scheduleSubmit');
+const error=document.getElementById('scheduleError');
+let opening=false;
+const main=()=>form.querySelector('input[name="higienizacao"]:checked')?.value||'';
+const extras=()=>Array.from(form.querySelectorAll('input[name="adicional"]:checked')).map(el=>el.value);
+const dateField=form.elements.namedItem('data');
+const today=new Date();
+const yyyy=today.getFullYear(),mm=String(today.getMonth()+1).padStart(2,'0'),dd=String(today.getDate()).padStart(2,'0');
+dateField.min=yyyy+'-'+mm+'-'+dd;
+function refresh(){
+ const selected=[...(main()?[main()]:[]),...extras()];
+ summary.textContent=selected.length?selected.length+' serviço(s): '+selected.join('; '):'Selecione pelo menos um serviço para continuar.';
+}
+form.addEventListener('change',()=>{opening=false;submit.disabled=false;refresh();});
+form.addEventListener('input',()=>{opening=false;submit.disabled=false;});
+form.addEventListener('submit',function(event){
+ event.preventDefault();
+ if(opening)return;
+ error.hidden=true;
+ const name=form.elements.namedItem('cliente').value.trim();
+ const vehicle=form.elements.namedItem('veiculo').value.trim();
+ const date=dateField.value;
+ const hour=form.elements.namedItem('hora').value;
+ const services=[...(main()?[main()]:[]),...extras()];
+ if(!name||!vehicle||!date||!hour||!services.length){
+   error.textContent='Preencha nome, veículo, data, horário e selecione pelo menos um serviço.';
+   error.hidden=false;return;
+ }
+ if(date<dateField.min){error.textContent='Escolha a data de hoje ou uma data futura.';error.hidden=false;return;}
+ const [y,m,d]=date.split('-');
+ const notes=form.elements.namedItem('observacoes').value.trim();
+ const message=[
+ '*Solicitação de agendamento — Black Diamond*','',
+ '*Nome:* '+name,'*Veículo:* '+vehicle,'',
+ '*Data desejada:* '+d+'/'+m+'/'+y,
+ '*Horário de preferência:* '+hour,'',
+ '*Serviços desejados:*',...services.map(s=>'• '+s),
+ ...(notes?['','*Observações:* '+notes]:[]),'',
+ 'Gostaria de confirmar a disponibilidade. Sei que o horário depende de confirmação.'
+ ].join('\n');
+ opening=true;submit.disabled=true;
+ window.open('https://wa.me/5514997417384?text='+encodeURIComponent(message),'_blank');
+});
+refresh();
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+}
+</script>
+</body></html>

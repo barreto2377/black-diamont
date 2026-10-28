@@ -1,0 +1,28 @@
+BLACK DIAMOND V5 — PWA + AGENDAMENTO
+
+Arquivos:
+- index.html: cartão digital e botões de orçamento e agendamento
+- orcamento.html: orçamento V4.2 preservado (abertura única do WhatsApp)
+- agendamento.html: pedido de data e horário, sem confirmação automática
+- manifest.webmanifest: configuração do aplicativo
+- sw.js: cache local para abrir páginas básicas sem internet
+- assets/: imagens e ícones
+
+INSTALAÇÃO LOCAL:
+1. Faça backup da pasta atual.
+2. Copie TODOS os arquivos e a pasta assets para a pasta do projeto.
+3. Abra index.html pelo Live Server do VS Code (http://127.0.0.1:5500).
+4. Teste Solicitar orçamento e Solicitar agendamento.
+5. Para instalar como PWA, use o menu Instalar aplicativo do Chrome quando disponível.
+
+PUBLICAÇÃO:
+Publique todos os arquivos juntos em HTTPS (ex.: GitHub Pages).
+O link local 127.0.0.1 não funciona no celular de outras pessoas.
+No Android: abra no Chrome e procure Instalar aplicativo / Adicionar à tela inicial.
+No iPhone: Safari > Compartilhar > Adicionar à Tela de Início.
+
+IMPORTANTE:
+- O agendamento NÃO reserva horários automaticamente: só prepara mensagem de WhatsApp.
+- A abertura de links externos e envio de mensagens exigem conexão.
+- O cache offline serve somente para abrir as páginas e imagens já instaladas.
+- O PWA não é um aplicativo publicado na Play Store/App Store.
